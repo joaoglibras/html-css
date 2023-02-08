@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Dinâmicas</title>
+</head>
+<body>
+    <h1>Imagem Dinâmica</h1>
+    <p>Tente abrir esse site em dispositivos com resoluções diferentes, ou aumente e diminua a janela do seu navegador.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/m.png" type="image/png">
+        <img src="imagens/g.png" alt="imagem flexível">
+    </picture>
+
+    <h2>Reproduzindo áudio</h2>
+    <p>Abaixo, áudio para ser reproduzido:</p>
+    <audio src="midia/ratinho.mp3" controls></audio>
+    <!--MP3 WAV OGG-->
+    <p>Também é possível carregar áudios de forma dinâmica:</p>
+    <audio preload="metadata" controls>
+        <source src="midia/ratinho.mp3" type="audio/mpeg">
+        <source src="midia/ratinho.ogg" type="audio/ogg">
+        <source src="midia/ratinho.wav" type="audio/wav">
+        <p>Infelizmente o seu navegador não conseguiu carregar o áudio, <a href="midia/ratinho.mp3" target="_blank"" download="midia/ratinho.mp3">clique aqui para baixar o áudio.</a></p>
+    </audio>
+</body>
+</html>
