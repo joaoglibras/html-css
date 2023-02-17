@@ -35,7 +35,7 @@ h1#principal {
 }
 
 h1 {font-size: 2em;}
-li#topico {font-weight: bold;}
+.topico {font-weight: bold;}
 p {text-align: justify;}
 
 
