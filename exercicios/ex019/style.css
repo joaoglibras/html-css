@@ -19,7 +19,7 @@ section#a{
 
 h1#principal {
     font-family: 'League Gothic', sans-serif;
-    font-size: 3.5em;
+    font-size: 3em;
     font-weight: 100;
     letter-spacing: 2px;
     color: white;
@@ -34,7 +34,8 @@ h1#principal {
     position: relative; top: -25px;
 }
 
-h1 {font-size: 2em;}
+h1 {font-size: 1.7em;}
+h2 { font-size: 1.3em;}
 .topico {font-weight: bold;}
 p {text-align: justify;}
 

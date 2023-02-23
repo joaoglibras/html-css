@@ -18,14 +18,14 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            max-width: 350px;
+            min-width: 350px;
             height: 300px;
             background-color: white;
             padding: 50px;
             border-radius: 5px;
             box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.644);
         }
-
+        /*FONTES*/
         h1 {font-size: 2em; text-align: center;}
 
         p {text-align: center;}
@@ -36,6 +36,11 @@
             text-decoration: none;
         }
 
+        mark {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: rgb(231, 231, 113);
+        }
+        /*FONTES*/
         a:visited {color: rgb(153, 73, 142);}
 
         a:hover {
@@ -43,8 +48,13 @@
             color:white;
         }
 
+        a:active {
+            border: 2px solid black;
+            background-color: rgba(15, 47, 95, 0.699);
+        }
+
         a::after {
-            content: '🔗';
+            content: ' 🔗';
             color: darkgrey;
             font-weight: normal;
             font-size: 0.8em;
@@ -60,6 +70,7 @@
             <li><a href="https://www.signingsavvy.com/" rel="external" target="_blank">Signing Savvy</a></li>
             <li><a href="https://babysignlanguage.com/" rel="external" target="_blank">Baby Sign Language</a></li>
         </ul>
+        <p>Usando o pseudo-elemento <mark>::after</mark>.</p>
     </section>
 </body>
 </html>
