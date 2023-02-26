@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #133D71;
+            margin: 0px;
+        }
+        p {
+            text-align: justify;
+        }
+        header {
+            background-color: white;
+            margin: 10px 50px;
+            padding: 10px;
+        }
+        nav {
+            background-color: #70261E;
+            padding: 2px;
+        }
+        nav > a {
+            color: white;
+            margin-right: 20px;
+            text-decoration: none;
+        }
+        nav > a:hover {
+            text-decoration: underline;
+        }
+        main {
+            background-color: white;
+            margin: 10px 50px;
+            padding: 10px;
+        }
+        section > article {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        article > aside > p {
+            background-color: lightgray;
+        }
+        footer > p {
+            background-color: #08192e;
+            color: white;
+            text-align: center;
+            padding: 5px;
+        }
+        footer > p > a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Principal</a>
+            <a href="#">Notícias</a>
+            <a href="#">Curiosidades</a>
+            <a href="#">Sobre nós</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Notícias - Brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, blanditiis dolores nam soluta expedita perferendis accusamus ipsum alias quidem fugiat minus id minima eaque ipsam, ex, eligendi asperiores cum placeat.</p>
+                <p><a href="#">Ler mais</a></p>
+                <aside>
+                    <p>Por <strong>Paulo Almeida</strong>.</p>
+                </aside>
+                <hr>
+                <article>
+                    <h2>Notícias - Ásia</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur nihil ducimus soluta eius quo dignissimos nobis, facilis illo. Laudantium cum architecto eaque? Magni excepturi sapiente tenetur, cum totam voluptatem iure?</p>
+                    <p><a href="#">Ler mais</a></p>
+                    <aside>
+                        <p>Por <strong>Ronaldo Reagan</strong>.</p>
+                    </aside>
+                </article>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Site desenvolvido por <a href="https://github.com/joaoglibras" rel="external" target="_blank">João Guilherme</a>.</p>
+    </footer>
+</body>
+</html>
