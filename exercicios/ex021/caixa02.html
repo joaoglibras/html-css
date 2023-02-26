@@ -14,35 +14,50 @@
         p {
             text-align: justify;
         }
+
+        /*HEADER*/
         header {
             background-color: white;
-            margin: 10px 50px;
+            margin: 10px auto;
             padding: 10px;
+            max-width: 800px;
         }
+
         nav {
             background-color: #70261E;
             padding: 2px;
         }
         nav > a {
+            display: inline-block;
+            margin-right: 5px;
             color: white;
-            margin-right: 20px;
             text-decoration: none;
         }
         nav > a:hover {
             text-decoration: underline;
         }
+
+        /*MAIN*/
         main {
             background-color: white;
-            margin: 10px 50px;
+            margin: 10px auto;
             padding: 10px;
+            max-width: 800px;
         }
-        section > article {
+        section {
+            margin-top: 10px;
             border: 1px solid black;
             padding: 5px;
         }
         article > aside > p {
             background-color: lightgray;
         }
+        author {
+            font-weight: bold;
+        }
+
+
+        /*FOOTER*/
         footer > p {
             background-color: #08192e;
             color: white;
@@ -51,6 +66,24 @@
         }
         footer > p > a {
             color: white;
+        }
+
+
+        /*PARA CELULAR*/
+        @media screen and (max-width:850px){
+            header {
+                margin: 10px 2%;
+            }
+
+            main {
+                margin: 10px 2%;
+            }
+        }
+            @media screen and (max-width:450px){
+            nav {
+                font-size: 2.7vw;
+            }
+
         }
     </style>
 </head>
@@ -67,7 +100,8 @@
     </header>
     <main>
         <section id="assuntos">
-
+            <h2>Música</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus consectetur praesentium accusamus dolores, nihil laboriosam fuga ipsam, nam, quod repellat minus corporis aliquam voluptatum non asperiores adipisci odio ipsum. Illo!</p>
         </section>
         <section id="noticias">
             <article>
@@ -75,18 +109,18 @@
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, blanditiis dolores nam soluta expedita perferendis accusamus ipsum alias quidem fugiat minus id minima eaque ipsam, ex, eligendi asperiores cum placeat.</p>
                 <p><a href="#">Ler mais</a></p>
                 <aside>
-                    <p>Por <strong>Paulo Almeida</strong>.</p>
+                    <p>Por <author>Paulo Almeida</author>.</p>
                 </aside>
+            </article>
                 <hr>
                 <article>
                     <h2>Notícias - Ásia</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur nihil ducimus soluta eius quo dignissimos nobis, facilis illo. Laudantium cum architecto eaque? Magni excepturi sapiente tenetur, cum totam voluptatem iure?</p>
                     <p><a href="#">Ler mais</a></p>
                     <aside>
-                        <p>Por <strong>Ronaldo Reagan</strong>.</p>
+                        <p>Por <author>Ronaldo Reagan</author>.</p>
                     </aside>
                 </article>
-            </article>
         </section>
     </main>
     <footer>
