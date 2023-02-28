@@ -148,10 +148,13 @@ aside > h3 {
     margin: 30px 0;
 }
 
-aside > ul {
+aside ul {
     columns: 2;
     max-width: fit-content;
+
     padding: 0px;
+    padding-inline-start: 0px;
+
     margin: 50px auto;
 }
 
@@ -167,6 +170,7 @@ aside > ul > li {
 aside > ul > li::before{
     content: '🔵 ';
     font-size: 10px;
+    color: var(--blue2);
 
 }
 
@@ -188,6 +192,10 @@ footer > p {
 footer a {
     color: white;
 }
+
+
+
+
 
 /* Celular */
 @media (max-width: 470px) {
@@ -244,7 +252,6 @@ footer a {
 
     aside ul {
         columns: 1;
-        margin: 10px 0;
     }
 
     /* footer */
@@ -260,7 +267,7 @@ footer a {
 
 
 
-/* <ul> config for less than 720px */
+/*config for less than 720px */
 @media (min-width: 471px) and (max-width: 720px) {
 /* MAIN */
     main h1 {
@@ -277,8 +284,7 @@ footer a {
 /* ASIDE */
 aside ul {
     columns: 1;
-    margin: 10px 0;
-    margin: auto;
+    margin: 10px auto;
 }
 }
 
