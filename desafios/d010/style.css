@@ -11,8 +11,8 @@
 }
 
 :root {
-    --blue1: #008cff;
-    --blue2: #02579c;
+    --blue1: #004175;
+    --blue2: #00294b;
     --alpha: #00254400;
     --grey1: #2b2b2b;
     --grey2: #161616;
@@ -83,10 +83,6 @@ nav > a:hover {
 
 /*main*/
 
-main {
-    
-}
-
 div.artigo {
     background-color: white;
     max-width: 1000px;
@@ -94,7 +90,7 @@ div.artigo {
     padding: 20px;
 }
 
-article > h1 {
+main h1 {
     font-family: var(--android-font);
     font-size: 1.7em;
     font-weight: 200;
@@ -104,13 +100,14 @@ article > h1 {
 
     margin-top: 0px;
 }
-article > h2 {
+main h2 {
     color: white;
     font-family: idroid, cursive;
     font-size: 1.3em;
     font-weight: 100;
 
     background-image: linear-gradient(90deg,var(--blue2)20%,var(--alpha)95%);
+    margin-top: 80px;
     padding: 2px 10px;
     border-radius: 10px 0 0 10px;
 }
@@ -128,11 +125,11 @@ main img.pequena {
 
 div.video {
     text-align: center;
-    background-color: #02579c;
+    background-color: var(--blue2);
     padding: 50px 0;
 }
 div.video > iframe {
-    border: 5px solid #002d55;
+    border: 5px solid #001120;
 }
 
 /* aside */
@@ -142,7 +139,7 @@ aside {
     border: 2px solid black;
 
     margin: 80px auto;
-    padding: 10px 100px;
+    padding: 10px 8vw;
 }
 
 aside > h3 {
@@ -153,16 +150,32 @@ aside > h3 {
 
 aside > ul {
     columns: 2;
-    margin: 50px 0px;
+    max-width: fit-content;
+    padding: 0px;
+    margin: 50px auto;
 }
 
+
+aside > ul > li {
+    display: block;
+    width: fit-content;
+    padding: 0 10px;
+    text-align: center;
+    line-height: 1.7;
+}
+
+aside > ul > li::before{
+    content: '🔵 ';
+    font-size: 10px;
+
+}
 
 /* footer */
 
 footer {
     text-align: center;
     color: white;
-    background-color: #003b6b;
+    background-color: var(--blue2);
 }
 
 footer > p {
@@ -226,6 +239,7 @@ footer a {
 
     aside h3 {
         margin: 20px 0;
+        font-size: 7vw;
     }
 
     aside ul {
@@ -242,6 +256,34 @@ footer a {
         margin-block-start: 0px;
     }
 }
+
+
+
+
+/* <ul> config for less than 720px */
+@media (min-width: 471px) and (max-width: 720px) {
+/* MAIN */
+    main h1 {
+        text-align: center;
+        font-size: 4.6vw;
+    }
+    main h2 {
+        font-size: 1.5;
+        text-align: center;
+        border-radius: 10px;
+        background-color: var(--blue2);
+        /*background-image: linear-gradient(90deg,var(--blue2)40%,var(--alpha));*/
+    }
+/* ASIDE */
+aside ul {
+    columns: 1;
+    margin: 10px 0;
+    margin: auto;
+}
+}
+
+
+
 
 /* placeholder div video */
 @media (max-width: 595px){
