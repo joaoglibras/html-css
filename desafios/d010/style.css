@@ -107,9 +107,13 @@ main h2 {
     font-weight: 100;
 
     background-image: linear-gradient(90deg,var(--blue2)20%,var(--alpha)95%);
-    margin-top: 80px;
+    margin-top: 3em;
     padding: 2px 10px;
     border-radius: 10px 0 0 10px;
+}
+
+main p {
+    line-height: 1.8em;
 }
 
 main img {
@@ -129,7 +133,7 @@ div.video {
     padding: 50px 0;
 }
 div.video > iframe {
-    border: 5px solid #001120;
+    border: 5px solid #001c35;
 }
 
 /* aside */
@@ -197,7 +201,7 @@ footer a {
 
 
 
-/* Celular */
+/* CELULAR */
 @media (max-width: 470px) {
     /* header */
     header h1 {
