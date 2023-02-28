@@ -10,8 +10,21 @@
     src: url(fontes/BebasNeue-Regular.ttf) format("truetype");
 }
 
+:root {
+    --blue1: #008cff;
+    --blue2: #02579c;
+    --grey1: #2b2b2b;
+    --grey2: #161616;
+
+    --default-font: Arial, Helvetica, sans-serif;
+    --header-font: 'bebasneue', cursive;
+    --android-font: 'idroid', cursive;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font);
+    margin: 0px;
+    background-image: linear-gradient(45deg, var(--grey1), var(--grey2));
 }
 
 p {
@@ -19,23 +32,115 @@ p {
 }
 
 /*header*/
-header > h1 {
-    font-family: bebasneue, cursive;
-    font-size: 2.8em;
+header {
+    background-image: linear-gradient(var(--blue1),var(--blue2));
+    margin: 0px;
+    color: white;
 }
 
+header > h1 {
+    font-family: var(--header-font);
+    font-size: 4em;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.493);
+    text-align: center;
+    margin: 0px;
+    padding: 80px 10px 10px 10px;
+    
+}
+
+header > p {
+    font-size: 1.2em;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.445);
+    padding: 10px;
+    margin: 0px;
+}
+
+/* nav */
+nav {
+    background-color: var(--blue2);
+    padding: 50px 20px 10px 20px ;
+}
+
+nav > a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 3px;
+    padding: 10px;
+    
+}
+
+nav > a:hover {
+    background-color: #ffffff8c;
+    color: black;
+}
 
 
 /*main*/
 
-article > h1 {
-    font-size: 1.7em;
+main {
+    background-color: white;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+
+    border-radius: 0 0 10px 10px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.822);
 }
 
 article > h1 {
-    font-family: idroid, cursive;
+    color: var(--blue2);
+    font-size: 1.7em;
+    margin-top: 0px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.205);
+}
+
+article > h1 {
+    font-family: var(--android-font);
 }
 
 article > h2 {
+    color: white;
     font-family: idroid, cursive;
+    font-size: 1.4em;
+    font-weight: 100;
+
+    background-image: linear-gradient(90deg,var(--blue2),rgba(255, 255, 255, 0));
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+div.video {
+    background-color: #02579c;
+    text-align: center;
+    margin: 0 -20px 0 -20px;
+    padding: 20px;
+}
+
+div.video > iframe {
+    border: 5px solid #002d55;
+}
+
+/* footer */
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: #02579c;
+}
+
+footer > p {
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 0px;
+}
+
+footer > p > a {
+    color: white;
 }
