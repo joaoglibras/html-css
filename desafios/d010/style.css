@@ -13,9 +13,7 @@
 :root {
     --blue1: #0060af;
     --blue2: #003c6d;
-    --alpha: #00254400;
-    --grey1: #2b2b2b;
-    --grey2: #161616;
+    --blue3: #001c35;
 
     --default-font: Arial, Helvetica, sans-serif;
     --header-font: 'bebasneue', cursive;
@@ -31,14 +29,17 @@ p {
     text-align: justify;
 }
 
-/*header*/
+/* DESKTOP */
+
+/*HEADER*/
 header {
-    background-image: linear-gradient(var(--blue1),var(--blue2));
-    margin: 0px;
     color: white;
+    background-image: linear-gradient(var(--blue1), var(--blue2));
+    margin: 0px;
+    padding-bottom: 40px;
 }
 
-header > h1 {
+header>h1 {
     font-family: var(--header-font);
     font-size: 4em;
     font-weight: 200;
@@ -48,10 +49,10 @@ header > h1 {
 
     margin: 0px;
     padding: 80px 10px 10px 10px;
-    
+
 }
 
-header > p {
+header>p {
     font-size: 1.2em;
     text-align: center;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.445);
@@ -59,23 +60,26 @@ header > p {
     margin: 0px;
 }
 
-/* nav */
+/* NAV */
 nav {
     background-color: var(--blue2);
-    padding: 50px 20px 10px 20px ;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    padding: 10px 20px 10px 20px;
 }
 
-nav > a {
+nav>a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 
     border-radius: 3px;
     padding: 10px;
-    
+
 }
 
-nav > a:hover {
+nav>a:hover {
     background-color: #ffffff8c;
     color: black;
 }
@@ -100,13 +104,14 @@ main h1 {
 
     margin-top: 0px;
 }
+
 main h2 {
     color: white;
     font-family: idroid, cursive;
     font-size: 1.3em;
     font-weight: 100;
 
-    background-image: linear-gradient(90deg,var(--blue2)20%,var(--alpha)95%);
+    background-image: linear-gradient(90deg, var(--blue2)20%, transparent 95%);
     margin-top: 3em;
     padding: 2px 10px;
     border-radius: 10px 0 0 10px;
@@ -121,6 +126,7 @@ main img {
     margin: auto;
     width: 100%;
 }
+
 main img.pequena {
     display: block;
     margin: auto;
@@ -132,12 +138,12 @@ div.video {
     background-color: var(--blue2);
     padding: 50px 0;
 }
-div.video > iframe {
-    border: 5px solid #001c35;
+
+div.video>iframe {
+    border: 5px solid var(--blue3);
 }
 
-/* aside */
-
+/* ASIDE */
 aside {
     max-width: 900px;
     border: 2px solid black;
@@ -146,10 +152,25 @@ aside {
     padding: 10px 8vw;
 }
 
-aside > h3 {
+aside>h3 {
     text-align: center;
     font-size: 1.5em;
     margin: 30px 0;
+}
+
+aside p.obs {
+    font-size: 0.8em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+
+    margin: 30px auto;
+    width: fit-content;
+
+    background-color: rgb(218, 218, 218);
+    padding: 0 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.466);
+
 }
 
 aside ul {
@@ -162,31 +183,40 @@ aside ul {
     margin: 50px auto;
 }
 
-
-aside > ul > li {
+aside li {
     display: block;
     width: fit-content;
-    padding: 0 10px;
     text-align: center;
-    line-height: 1.7;
+    padding: 3px 8px;
+    line-height: 1.5em;
 }
 
-aside > ul > li::before{
+aside li::before {
     content: '🔵 ';
     font-size: 10px;
     color: var(--blue2);
 
 }
 
-/* footer */
+aside abbr {
+    text-decoration: none;
+    padding: 3px 8px;
+}
 
+aside abbr:hover {
+    background-color: rgba(255, 255, 0, 0.699);
+    border-radius: 4px;
+}
+
+
+/* FOOTER */
 footer {
     text-align: center;
     color: white;
-    background-color: var(--blue2);
+    background-color: var(--blue3);
 }
 
-footer > p {
+footer>p {
     text-align: center;
     padding: 5px;
     margin-bottom: 0px;
@@ -201,8 +231,12 @@ footer a {
 
 
 
+
+
+
 /* CELULAR */
 @media (max-width: 470px) {
+
     /* header */
     header h1 {
         padding: 30px 5px 5px 5px;
@@ -211,20 +245,20 @@ footer a {
 
     header p {
         font-size: 4.3vw;
-        margin: -1px;
     }
 
     /* nav */
     nav {
-        text-align: center;
-        padding: 30px 5px 10px 5px;   
         font-size: 3vw;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
-    nav > a {
+    nav a {
         padding: 5px;
         margin-right: 10px;
     }
+
     /* main */
     main.artigo {
         padding: 5px;
@@ -234,19 +268,19 @@ footer a {
         text-align: center;
         font-size: 6.6vw;
     }
+
     main h2 {
         font-size: 5vw;
         text-align: center;
         border-radius: 10px;
         background-color: var(--blue2);
-        /*background-image: linear-gradient(90deg,var(--blue2)40%,var(--alpha));*/
     }
 
     /* aside */
 
     aside {
         padding: 5px 15px;
-        margin: 20px 0 40px 0; 
+        margin: 20px 0 40px 0;
     }
 
     aside h3 {
@@ -263,42 +297,58 @@ footer a {
         padding: 0;
         font-size: 3.3vw;
     }
-    footer p{
+
+    footer p {
         margin-block-start: 0px;
     }
-}
+} */
+
+
+
+
+
 
 
 
 
 /*config for less than 720px */
 @media (min-width: 471px) and (max-width: 720px) {
-/* MAIN */
+
+    /* HEADER */
+    header p {
+        font-size: 2.4vw;
+    }
+
+    /* MAIN */
     main h1 {
         text-align: center;
         font-size: 4.6vw;
     }
+
     main h2 {
-        font-size: 1.5;
+        font-size: 1.3em;
         text-align: center;
         border-radius: 10px;
         background-color: var(--blue2);
         /*background-image: linear-gradient(90deg,var(--blue2)40%,var(--alpha));*/
     }
-/* ASIDE */
-aside ul {
-    columns: 1;
-    margin: 10px auto;
+
+    /* ASIDE */
+    aside ul {
+        columns: 1;
+        margin: 10px auto;
+    }
 }
-}
+
+
+
 
 
 
 
 /* placeholder div video */
-@media (max-width: 595px){
-    div > iframe {
+@media (max-width: 595px) {
+    div>iframe {
         width: 85vw;
     }
 }
-
