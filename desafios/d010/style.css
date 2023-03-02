@@ -25,9 +25,7 @@ body {
     margin: 0px;
 }
 
-p {
-    text-align: justify;
-}
+
 
 /* DESKTOP */
 
@@ -35,25 +33,25 @@ p {
 header {
     color: white;
     background-image: linear-gradient(var(--blue1), var(--blue2));
-    margin: 0px;
+    padding-top: 60px;
     padding-bottom: 40px;
 }
 
-header>h1 {
+header h1 {
     font-family: var(--header-font);
-    font-size: 4em;
+    font-size: clamp(2rem, 15vw, 4rem);
     font-weight: 200;
 
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.493);
     text-align: center;
 
     margin: 0px;
-    padding: 80px 10px 10px 10px;
+    padding: 10px;
 
 }
 
-header>p {
-    font-size: 1.2em;
+header p {
+    font-size: clamp(1rem, 4.3vw, 1.2rem);
     text-align: center;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.445);
     padding: 10px;
@@ -65,11 +63,13 @@ nav {
     background-color: var(--blue2);
     position: sticky;
     top: 0;
+    padding: 10px 0px;
+
+    font-size: clamp(0.65rem, 3vw ,1rem);
     text-align: center;
-    padding: 10px 20px 10px 20px;
 }
 
-nav>a {
+nav > a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -79,24 +79,22 @@ nav>a {
 
 }
 
-nav>a:hover {
+nav > a:hover {
     background-color: #ffffff8c;
     color: black;
 }
 
-
-/*main*/
-
-div.artigo {
+/*MAIN*/
+section.artigo {
     background-color: white;
     max-width: 1000px;
     margin: auto;
-    padding: 20px;
+    padding: 0.8em;
 }
 
 main h1 {
     font-family: var(--android-font);
-    font-size: 1.7em;
+    font-size: clamp(1rem, 6vw + 0.1rem, 1.7rem);
     font-weight: 200;
 
     color: var(--blue2);
@@ -107,8 +105,8 @@ main h1 {
 
 main h2 {
     color: white;
-    font-family: idroid, cursive;
-    font-size: 1.3em;
+    font-family: var(--android-font);
+    font-size: clamp(0.9rem, 5vw, 1.3em);
     font-weight: 100;
 
     background-image: linear-gradient(90deg, var(--blue2)20%, transparent 95%);
@@ -119,6 +117,7 @@ main h2 {
 
 main p {
     line-height: 1.8em;
+    text-align: justify;
 }
 
 main img {
@@ -137,25 +136,37 @@ div.video {
     text-align: center;
     background-color: var(--blue2);
     padding: 50px 0;
+
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
 div.video>iframe {
     border: 5px solid var(--blue3);
+    
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
 }
 
 /* ASIDE */
 aside {
     max-width: 900px;
     border: 2px solid black;
-
-    margin: 80px auto;
-    padding: 10px 8vw;
+    margin: 2em auto;
+    padding: 10px 5vw;
 }
 
 aside>h3 {
     text-align: center;
     font-size: 1.5em;
-    margin: 30px 0;
 }
 
 aside p.obs {
@@ -170,23 +181,22 @@ aside p.obs {
     padding: 0 5px;
     border-radius: 5px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.466);
-
 }
 
 aside ul {
     columns: 2;
-    max-width: fit-content;
+    list-style-type: none;
+    list-style-position: inside;
 
+    max-width: fit-content;
+    margin: 50px auto;
     padding: 0px;
     padding-inline-start: 0px;
 
-    margin: 50px auto;
 }
 
+
 aside li {
-    display: block;
-    width: fit-content;
-    text-align: center;
     padding: 3px 8px;
     line-height: 1.5em;
 }
@@ -204,7 +214,7 @@ aside abbr {
 }
 
 aside abbr:hover {
-    background-color: rgba(255, 255, 0, 0.699);
+    background-color: rgba(255, 255, 0, 0.37);
     border-radius: 4px;
 }
 
@@ -216,11 +226,11 @@ footer {
     background-color: var(--blue3);
 }
 
-footer>p {
+footer p {
+    font-size:  clamp(0.6rem, 3.3vw, 1rem);
     text-align: center;
     padding: 5px;
-    margin-bottom: 0px;
-    margin-block-start: 40px;
+    margin: 0px;
 }
 
 footer a {
@@ -229,126 +239,39 @@ footer a {
 
 
 
-
-
-
-
-
-/* CELULAR */
-@media (max-width: 470px) {
-
-    /* header */
-    header h1 {
-        padding: 30px 5px 5px 5px;
-        font-size: 15vw;
+@media (max-width: 700px) {
+    header {
+        padding-top: 40px;
+        padding-bottom: 20px;
     }
-
-    header p {
-        font-size: 4.3vw;
-    }
-
-    /* nav */
-    nav {
-        font-size: 3vw;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    nav a {
-        padding: 5px;
-        margin-right: 10px;
-    }
-
-    /* main */
-    main.artigo {
-        padding: 5px;
-    }
-
     main h1 {
         text-align: center;
-        font-size: 6.6vw;
     }
-
     main h2 {
-        font-size: 5vw;
         text-align: center;
         border-radius: 10px;
         background-color: var(--blue2);
     }
+}
 
-    /* aside */
-
-    aside {
-        padding: 5px 15px;
-        margin: 20px 0 40px 0;
+@media (max-width: 595px) {
+    div.video {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 42.5%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
     }
-
-    aside h3 {
-        margin: 20px 0;
-        font-size: 7vw;
+    div.video > iframe {
+        position: absolute;
+        top:10%;
+        left: 10%;
+        bottom: 0;
+        right: 0;
+        width: 80%;
+        height: 80%;    
     }
-
-    aside ul {
-        columns: 1;
-    }
-
-    /* footer */
-    footer {
-        padding: 0;
-        font-size: 3.3vw;
-    }
-
-    footer p {
-        margin-block-start: 0px;
-    }
-} */
-
-
-
-
-
-
-
-
-
-/*config for less than 720px */
-@media (min-width: 471px) and (max-width: 720px) {
-
-    /* HEADER */
-    header p {
-        font-size: 2.4vw;
-    }
-
-    /* MAIN */
-    main h1 {
-        text-align: center;
-        font-size: 4.6vw;
-    }
-
-    main h2 {
-        font-size: 1.3em;
-        text-align: center;
-        border-radius: 10px;
-        background-color: var(--blue2);
-        /*background-image: linear-gradient(90deg,var(--blue2)40%,var(--alpha));*/
-    }
-
-    /* ASIDE */
     aside ul {
         columns: 1;
         margin: 10px auto;
     }
-}
-
-
-
-
-
-
-
-/* placeholder div video */
-@media (max-width: 595px) {
-    div>iframe {
-        width: 85vw;
-    }
-}
+} 
