@@ -62,8 +62,8 @@ header p {
 nav {
     background-color: var(--blue2);
     position: sticky;
-    top: 0;
-    padding: 10px 0px;
+    top: -1px;
+    padding: 11px 0px;
 
     font-size: clamp(0.65rem, 3vw ,1rem);
     text-align: center;
@@ -75,7 +75,8 @@ nav > a {
     font-weight: bold;
 
     border-radius: 3px;
-    padding: 10px;
+    padding: 4px 10px;
+    margin-right: 20px;
 
 }
 
@@ -132,28 +133,22 @@ main img.pequena {
     max-width: 350px;
 }
 
-div.video {
-    text-align: center;
-    background-color: var(--blue2);
-    padding: 50px 0;
 
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+/* VIDEO IFRAME */
+section.videobg{
+    background-color: var(--blue2);
+    padding: 50px 0.8em;
+}
+
+section>div.video {
+    border: 5px solid var(--blue3);
+    max-width: 1000px;
+    margin: auto;
 }
 
 div.video>iframe {
-    border: 5px solid var(--blue3);
-    
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    bottom: 0;
-    right: 0;
-    width: 50%;
-    height: 50%;
-}
+    width: 1000px;
+    height: 562.5px;
 }
 
 /* ASIDE */
@@ -192,7 +187,6 @@ aside ul {
     margin: 50px auto;
     padding: 0px;
     padding-inline-start: 0px;
-
 }
 
 
@@ -244,6 +238,9 @@ footer a {
         padding-top: 40px;
         padding-bottom: 20px;
     }
+    nav > a {
+        margin-right: 0px;
+    }
     main h1 {
         text-align: center;
     }
@@ -252,26 +249,47 @@ footer a {
         border-radius: 10px;
         background-color: var(--blue2);
     }
+
 }
 
-@media (max-width: 595px) {
-    div.video {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    padding-top: 42.5%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-    }
-    div.video > iframe {
-        position: absolute;
-        top:10%;
-        left: 10%;
-        bottom: 0;
-        right: 0;
-        width: 80%;
-        height: 80%;    
-    }
+
+
+
+
+
+
+/*adjust aside colum to 1*/
+@media (max-width: 590px) {
     aside ul {
         columns: 1;
         margin: 10px auto;
     }
 } 
+
+/* VIDEO IFRAME after 1000px */
+@media (max-width: 1000px) {
+section.video2{
+    text-align: center;
+    background-color: var(--blue2);
+    padding: 50px 0.8em;
+}
+
+section>div.video {
+    border: 5px solid var(--blue3);
+    max-width: 1000px;
+    max-height: 562px;
+    margin: auto;
+
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+div.video>iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+}
