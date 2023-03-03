@@ -1,15 +1,12 @@
 @charset "UTF-8";
-
 @font-face {
     font-family: idroid;
     src: url(fontes/idroid.otf) format("opentype");
 }
-
 @font-face {
     font-family: bebasneue;
     src: url(fontes/BebasNeue-Regular.ttf) format("truetype");
 }
-
 :root {
     --blue1: #0060af;
     --blue2: #003c6d;
@@ -19,13 +16,10 @@
     --header-font: 'bebasneue', cursive;
     --android-font: 'idroid', cursive;
 }
-
 body {
     font-family: var(--default-font);
     margin: 0px;
 }
-
-/* DESKTOP */
 
 /*HEADER*/
 header {
@@ -34,7 +28,6 @@ header {
     padding-top: 60px;
     padding-bottom: 40px;
 }
-
 header h1 {
     font-family: var(--header-font);
     font-size: clamp(2rem, 15vw, 4rem);
@@ -47,7 +40,6 @@ header h1 {
     padding: 10px;
 
 }
-
 header p {
     font-size: clamp(1rem, 4.3vw, 1.2rem);
     text-align: center;
@@ -58,7 +50,7 @@ header p {
 
 /* NAV */
 nav {
-    z-index: 2;
+    z-index: 1;
     background-color: var(--blue2);
     position: sticky;
     top: -5px;
@@ -67,7 +59,6 @@ nav {
     font-size: clamp(0.65rem, 3vw ,1rem);
     text-align: center;
 }
-
 nav > a {
     color: white;
     text-decoration: none;
@@ -78,7 +69,6 @@ nav > a {
     margin-right: 20px;
 
 }
-
 nav > a:hover {
     background-color: #ffffff8c;
     color: black;
@@ -91,7 +81,6 @@ section.artigo {
     margin: auto;
     padding: 0.8em;
 }
-
 main h1 {
     font-family: var(--android-font);
     font-size: clamp(1rem, 6vw + 0.1rem, 1.7rem);
@@ -102,7 +91,6 @@ main h1 {
 
     margin-top: 0px;
 }
-
 main h2 {
     color: white;
     font-family: var(--android-font);
@@ -114,18 +102,15 @@ main h2 {
     padding: 2px 10px;
     border-radius: 10px 0 0 10px;
 }
-
 main p {
     line-height: 1.8em;
     text-align: justify;
 }
-
 main img {
     display: block;
     margin: auto;
     width: 100%;
 }
-
 main img.pequena {
     display: block;
     margin: auto;
@@ -138,13 +123,12 @@ section.videobg{
     background-color: var(--blue2);
     padding: 50px 0.8em;
 }
-
 section>div.video {
     border: 5px solid var(--blue3);
     max-width: 1000px;
+    max-height: 562.5px;
     margin: auto;
 }
-
 div.video>iframe {
     width: 1000px;
     height: 562.5px;
@@ -157,12 +141,10 @@ aside {
     margin: 2em auto;
     padding: 10px 5vw;
 }
-
 aside>h3 {
     text-align: center;
     font-size: 1.5em;
 }
-
 aside p.obs {
     font-size: 0.8em;
     font-family: 'Courier New', Courier, monospace;
@@ -176,7 +158,6 @@ aside p.obs {
     border-radius: 5px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.466);
 }
-
 aside ul {
     columns: 2;
     list-style-type: none;
@@ -187,30 +168,24 @@ aside ul {
     padding: 0px;
     padding-inline-start: 0px;
 }
-
-
 aside li {
     padding: 3px 8px;
     line-height: 1.5em;
 }
-
 aside li::before {
     content: '🔵 ';
     font-size: 10px;
     color: var(--blue2);
 
 }
-
 aside abbr {
     text-decoration: none;
     padding: 3px 8px;
 }
-
 aside abbr:hover {
     background-color: rgba(255, 255, 0, 0.37);
     border-radius: 4px;
 }
-
 
 /* FOOTER */
 footer {
@@ -218,17 +193,21 @@ footer {
     color: white;
     background-color: var(--blue3);
 }
-
 footer p {
     font-size:  clamp(0.6rem, 3.3vw, 1rem);
     text-align: center;
     padding: 5px;
     margin: 0px;
 }
-
 footer a {
     color: white;
 }
+
+
+
+
+
+
 
 
 
@@ -251,12 +230,6 @@ footer a {
 
 }
 
-
-
-
-
-
-
 /*adjust aside colum to 1*/
 @media (max-width: 590px) {
     aside ul {
@@ -265,25 +238,13 @@ footer a {
     }
 } 
 
-/* VIDEO IFRAME after 1000px */
-@media (max-width: 1000px) {
-section.video2{
-    text-align: center;
-    background-color: var(--blue2);
-    padding: 50px 0.8em;
-}
-
+/* video iframe after 1050px */
+@media (max-width: 1050px) {
 section>div.video {
-    border: 5px solid var(--blue3);
-    max-width: 1000px;
-    max-height: 562px;
-    margin: auto;
-
     position: relative;
     overflow: hidden;
     padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
-
 div.video>iframe {
     position: absolute;
     top: 0;
