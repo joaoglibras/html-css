@@ -148,7 +148,6 @@ section>div.video {
 }
 
 div.video>iframe {
-    z-index: 1;
     width: 1000px;
     height: 562.5px;
 }
