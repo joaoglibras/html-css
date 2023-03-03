@@ -60,6 +60,7 @@ header p {
 
 /* NAV */
 nav {
+    z-index: 2;
     background-color: var(--blue2);
     position: sticky;
     top: -5px;
@@ -147,6 +148,7 @@ section>div.video {
 }
 
 div.video>iframe {
+    z-index: 1;
     width: 1000px;
     height: 562.5px;
 }
