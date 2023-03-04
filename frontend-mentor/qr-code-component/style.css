@@ -20,12 +20,6 @@ body {
 
 
 .container {
-    height: 90dvh;
-    display: grid;
-    justify-content: center;
-}
-
-main {
     background-color: white;
     max-width: 250px;
     padding: 15px;
@@ -34,6 +28,11 @@ main {
     margin: auto;
 }
 
+main {
+    height: 95dvh;
+    display: grid;
+    justify-content: center;
+}
 
 
 main h1 {
@@ -56,7 +55,6 @@ img {
 
 /* FOOTER */
 footer {
-    margin-top: 5dvh;
     font-size: 12px;
 }
 footer a {
