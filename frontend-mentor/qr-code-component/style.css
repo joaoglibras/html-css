@@ -20,7 +20,7 @@ body {
 
 
 .container {
-    height: 90svh;
+    height: 90dvh;
     display: grid;
     justify-content: center;
 }
@@ -56,7 +56,7 @@ img {
 
 /* FOOTER */
 footer {
-    margin-top: 5svh;
+    margin-top: 5dvh;
     font-size: 12px;
 }
 footer a {
