@@ -1,13 +1,13 @@
 # Curso de HTML5 e CSS3 do prof. Gustavo Guanabara
 
-##Exercícios
+## Exercícios
 
-Contém todos os exercícios do curso
+- Contém todos os exercícios do curso
 
-##Desafios
+## Desafios
 
-Contém os desafios do curso.
+- Contém os desafios do curso.
 
-##Mine
+## Mine
 
-Contém sites que eu mesmo decidi criar para praticar, ou que não foi ensinado pelo professor Guanabara.
+- Contém sites que eu mesmo decidi criar para praticar, ou que não foi ensinado pelo professor Guanabara.
