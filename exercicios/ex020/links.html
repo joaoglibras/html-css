@@ -32,7 +32,7 @@
 
         p {text-align: center;}
 
-        a {
+        ul a {
             color: rgb(61, 145, 93);
             font-weight: bold;
             text-decoration: none;
@@ -43,23 +43,27 @@
             background-color: rgb(231, 231, 113);
         }
         /*FONTES*/
-        a:visited {color: rgb(153, 73, 142);}
+        ul a:visited {color: rgb(153, 73, 142);}
 
-        a:hover {
+        ul a:hover {
             background-color: rgba(0, 0, 0, 0.658);
             color:white;
         }
 
-        a:active {
+        ul a:active {
             border: 2px solid black;
             background-color: rgba(15, 47, 95, 0.699);
         }
 
-        a::after {
+        ul a::after {
             content: ' 🔗';
             color: darkgrey;
             font-weight: normal;
             font-size: 0.8em;
+        }
+        .voltar {
+            display: block;
+            text-align: center;
         }
     </style>
 </head>
@@ -73,6 +77,8 @@
             <li><a href="https://babysignlanguage.com/" rel="external" target="_blank">Baby Sign Language</a></li>
         </ul>
         <p>Usando o pseudo-elemento <mark>::after</mark>.</p>
+        <a class="voltar" href="index.html" rel="prev">Voltar</a>
     </section>
+    
 </body>
 </html>
