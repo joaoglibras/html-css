@@ -1,4 +1,4 @@
-# Curso de HTML5 e CSS3 do prof. Gustavo Guanabara
+# Curso de HTML5 e CSS3 do prof. Gustavo Guanabara 🚀
 
 ## Exercícios
 
